@@ -1,0 +1,93 @@
+﻿<Window x:Class="FlowerShopWPF.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мир цветов" 
+        Height="738" Width="450"
+        MinHeight="520" MinWidth="450"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResize">
+    <Grid Background="#FFF5F5F5">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <Border Width="380" Background="White" 
+                    CornerRadius="10" Padding="30" Margin="20"
+                    VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect Color="#CCCCCC" ShadowDepth="3" BlurRadius="10"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock Text="Регистрация" FontSize="22" FontWeight="Bold" 
+                               Foreground="#FF8E8E" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    <TextBlock Text="Логин:" FontSize="13" Margin="0,0,0,3"/>
+                    <TextBox x:Name="txtLogin" Height="32" FontSize="13" Padding="5"/>
+
+                    <TextBlock Text="Пароль:" FontSize="13" Margin="0,8,0,3"/>
+                    <PasswordBox x:Name="txtPassword" Height="32" FontSize="13" Padding="5"/>
+
+                    <TextBlock Text="ФИО:" FontSize="13" Margin="0,8,0,3"/>
+                    <TextBox x:Name="txtName" Height="32" FontSize="13" Padding="5"/>
+
+                    <TextBlock Text="Телефон:" FontSize="13" Margin="0,8,0,3"/>
+                    <TextBox x:Name="txtPhone" Height="32" FontSize="13" Padding="5"/>
+
+                    <TextBlock Text="Email:" FontSize="13" Margin="0,8,0,3"/>
+                    <TextBox x:Name="txtEmail" Height="32" FontSize="13" Padding="5"/>
+
+                    <TextBlock Text="Адрес:" FontSize="13" Margin="0,8,0,3"/>
+                    <TextBox x:Name="txtAddress" Height="32" FontSize="13" Padding="5"/>
+
+                    <Button x:Name="btnRegister" Content="Зарегистрироваться" Height="38" Margin="0,20,0,0"
+                            Background="#4CAF50" Foreground="White" FontSize="15" FontWeight="Bold"
+                            BorderThickness="0" Cursor="Hand" Click="btnRegister_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" 
+                                                    CornerRadius="5" Padding="5">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                                                VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#45A049"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                    <Button Content="Отмена" Height="35" Margin="0,8,0,0"
+                            Background="#CCCCCC" Foreground="#333" FontSize="13"
+                            BorderThickness="0" Cursor="Hand" Click="btnCancel_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="{TemplateBinding Background}" 
+                                                    CornerRadius="5" Padding="5">
+                                                <ContentPresenter HorizontalAlignment="Center" 
+                                                                VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#BBBBBB"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Window>
